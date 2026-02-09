@@ -19,6 +19,6 @@ def create_table():
             nome TEXT UNIQUE
         )    
     """)
-conn.commit()
-cur.close()
-conn.close()
+    conn.commit()
+    cur.close()
+    conn.close()

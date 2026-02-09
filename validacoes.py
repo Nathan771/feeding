@@ -6,7 +6,7 @@ def validate_user(nome_digitado):
 
     #busca no banco se o nome já existe
 
-    cur.execute("SELECT nome FROM usuarios WHERE LOWER(nome) = LOWER (%s)")
+    cur.execute("SELECT nome FROM usuarios WHERE nome = LOWER(%s)", (nome_digitado, ))
     usuario = cur.fetchone()
 
     cur.close()
